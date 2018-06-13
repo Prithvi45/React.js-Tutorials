@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ES6 Syntax's </title>
+
+<!-- use jsbin.com -->
+
+
+<!-- Javascript Variables var let and const -->
+
+<script type="text/javascript">
+	var myName = 'Prithvi';
+	console.log(myName);
+	myName = 'Prithviraj'
+	console.log(myName);
+
+
+// let is similar to initializing variables
+	let myAge = '18';
+	console.log(myAge);
+	myAge =  '24';
+	console.log(myAge);
+
+// const is an constant, cannot be updated once it get initialized
+	const myNumber = '100';
+	console.log(myNumber);
+
+ // Js runtime will through error here
+	myNumber = '101';
+	console.log(myNumber)
+</script>
+
+
+<!-- Arrow Functions-->
+<script type="text/javascript">
+	// Normal js function
+	function myFunc(){
+
+	};
+
+   // Arrow function
+   var myFunction = () =>{
+
+   };
+
+</script>
+
+
+<!-- Exampls -->
+<script type="text/javascript">
+	function myFunc(name,age){
+  console.log(name,age)
+};
+
+
+myFunc('prithvi',23);
+
+
+// Arrow Functions
+
+const myNewFunc = (name) => {
+  console.log(name)
+};
+
+myNewFunc('Prithviraj');
+
+
+
+
+// for single argument i can remove brackets
+const myNewFunc01 = name => {
+  console.log(name)
+};
+
+myNewFunc01('raj');
+
+
+
+const myNewFunc02 = (name,age) =>{
+  console.log(name,age);
+};
+
+myNewFunc02('Prithvi',24);
+
+
+
+const multiply = (number) =>{
+  return number * 2;
+};
+console.log(multiply(2));
+
+// we can optimize above code
+const mul = number => number * 2;
+console.log(mul(3));
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

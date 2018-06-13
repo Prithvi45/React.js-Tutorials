@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exports-Imports(Modules) and Classes</title>
+	<!-- refer images from repo for understanding exports and imports in js  -->
+
+
+	<!-- Classes-->
+	<script type="text/javascript">
+		class Person {
+			name = 'Prithvi';  //property   
+			call();   //method
+		}
+	</script>
+
+<!-- Class Example-->
+	<script type="text/javascript">
+		class Person{
+
+			constructor (){
+            this.name = 'Prithviraj';
+			};
+ // constructor is an default inbuilt function 
+
+            printMyName () {
+            console.log(this.name
+            	)
+            };  
+
+		};
+
+		const person  = new Person();
+		console.log('========================')
+		person.printMyName();
+
+	</script>
+
+
+
+<!-- Inheritance in Class Example-->
+	<script type="text/javascript">
+		class Human{
+			constructor(){
+				this.gender = 'male';
+			};
+
+			printMyGender() {
+				console.log(this.gender);
+			};
+			};
+
+
+		class NewPerson extends Human {
+
+			constructor (){
+            super();
+            this.name = 'Prithviraj';
+			};
+ // constructor is an default inbuilt function 
+
+            printMyName () {
+            console.log(this.name
+            	)
+            };  
+
+		};
+
+		const newperson  = new NewPerson();
+		console.log('<========== Inheritance ==============>')
+		newperson.printMyName();
+		newperson.printMyGender();
+
+	</script>
+
+
+
+
+
+<!-- Above Code can be written in this way (ES7 way)-->
+
+<!-- 
+	class Human{
+			
+		gender = 'male';
+			
+
+			printMyGender = () => {
+				console.log(this.gender);
+			};
+			};
+
+
+		class NewPerson extends Human {
+
+			
+            
+            name = 'Prithviraj';
+			
+ // constructor is an default inbuilt function 
+
+            printMyName = () => {
+            console.log(this.name
+            	)
+            };  
+
+		};
+
+		const newperson  = new NewPerson();
+		newperson.printMyName();
+		newperson.printMyGender();
+
+	-->
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>
