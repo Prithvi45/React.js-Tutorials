@@ -20,17 +20,19 @@
 </style>
 
 <script type="text/javascript">
-	function Person() {
-     return (
-           <div className="person">
-           <h1 >Prithvi</h1>
-           <p>My Age : 24</p>
-          </div> 
-          );
-    };
+function Person(props) {
+  return (
+  <div className="person">
+  <h1 >{ props.name}</h1>
+  <p>My Age : {props.age}</p>
+</div> 
+  );
+};
 
-ReactDOM.render(<Person />, document.querySelector('#p1'));
 
+ReactDOM.render(<Person name="Prithvi" age="23"/>, document.querySelector('#p1'));
+
+ReactDOM.render(<Person name="Prithviraj" age="24"/>, document.querySelector('#p2'));
 </script>
 
 	<title>React Tutorials</title>
@@ -39,10 +41,9 @@ ReactDOM.render(<Person />, document.querySelector('#p1'));
 <body>
 
 
-<div class="person">
-  <h1 >Prithvi</h2>
-  <p>My Age : 24</p>
-</div>
+<div id="p1"></div>
+<div id="p2"></div>
+
 
 
 </body>
