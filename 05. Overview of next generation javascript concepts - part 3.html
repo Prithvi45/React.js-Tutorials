@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spread and Rest Operators | References </title>
+<!-- Refer Images from repo to undertsand the concept-->
+
+	<script type="text/javascript">
+		const number = [1,2,3];
+		const newNumber = [...number,4];        // ... means spread , here number array will be extended into newNumber array as [1,2,3,4]
+
+
+
+        //similarly spread can be used for javascript objects as well
+        const Person = {name:'Prithvi'};
+		const newPerson  = {
+		  ...Person,
+		  age:'24'
+		};
+console.log(newPerson)
+
+
+      // Rest operator : we can pass a list of argument to a function
+
+       // Example 01
+      const myfunct = (...args) => {
+      console.log(args)
+      };
+      myfunct('prithvi',123,'mane')
+
+
+       // Example 02
+      const filter = (...args) =>{
+	  return args.filter(el => el === 1);
+	  };
+	  console.log(filter(1,2,3,1));
+
+	</script>
+
+
+
+<!-- References: objects and arrays in js use references -->
+<!-- In below example, number is creating new variable, its not pointing to variable num-->
+<script type="text/javascript">
+var numb = 14;
+console.log(numb);
+const number = numb;
+console.log(number);
+numb=122;
+console.log(number);
+</script>
+<!-- Objects creates references-->
+<script type="text/javascript">
+var Person = {name:'Prithvi'};
+console.log(Person);
+
+var newPerson = Person;
+console.log(newPerson);
+
+// overwrite Person
+
+Person.name ='Prithviraj'
+//newPerson will hold updated value of Person object, bcoz it is referencing
+console.log(newPerson);
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>  
