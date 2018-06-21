@@ -1,0 +1,11 @@
+Components 
+1. Function based:
+ - pass arguments (props) , and access by props.
+ - cannot use state here
+
+2. Class based
+ - access args by this
+ - use state and setState
+
+* we can pass both  property(variables, values) and method (function) as an argument to a component
+* .bind(this, args) :- used to pass arguments  
