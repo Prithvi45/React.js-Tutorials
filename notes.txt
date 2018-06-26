@@ -9,3 +9,16 @@ Components
 
 * we can pass both  property(variables, values) and method (function) as an argument to a component
 * .bind(this, args) :- used to pass arguments  
+
+
+
+For styling css 
+1. Using Radium
+->we can make hover, media queries etc
+
+2. CSS Modules
+-> we need to enable css module 
+$ npm run eject
+we will make changes into configuration file , so use eject method. After ejecting u will find new config adnd script directories into your project
+->add below changes in webpack.config.dev.js
+ 

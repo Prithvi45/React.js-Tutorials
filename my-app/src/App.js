@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import classes from './App.css';
 import Person from './Person/Person';
 
 
@@ -60,18 +60,8 @@ class App extends Component {
 
   render() {
 
-  	const style = {
-  		backgroundColor: 'green',
-  		color : 'white',
-  		font : 'inherit',
-  		border : '1 solid blue',
-  		padding : '8px',
-  		cursor : 'pointer',
-  	}
-
   	let person = null;
-
-  
+  	let btnclass = null;
 
   	if (this.state.showPersons)
   	{
@@ -86,29 +76,25 @@ class App extends Component {
 		}
         </div>
   			);
-        style.backgroundColor='red';
-        style[':hover'] = {
-        	backgroundColor :'salmon',
-        	color :'white'
-        }
 
+              btnclass = classes.Red;
   	}
     // let classes = ['red','bold'].join(' ')  
-    let classes = [];
+    const  assignedClasses = [];
     if (this.state.persons.length <=2){
-    	classes.push('red');
+    	assignedClasses.push(classes.red);
     	}
     if (this.state.persons.length <=1){
-    	classes.push('red bold');
+    	assignedClasses.push(classes.bold);
     }	
   	return (
   		
-       <div className="App">
-       <h2 className={classes.join(' ')}> Hi , i am Prithviraj</h2>
+       <div className={classes.App}>
+       <h2 className={assignedClasses.join(' ')}> Hi , i am Prithviraj</h2>
        <Person name="Prithvi" age="23" />
 
        <button 
-       style={style}
+       className={btnclass}
        onClick={this.togglePersonsHandler}  >Switch Name</button>
       
          {person}
