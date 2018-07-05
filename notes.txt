@@ -22,3 +22,11 @@ $ npm run eject
 we will make changes into configuration file , so use eject method. After ejecting u will find new config adnd script directories into your project
 ->add below changes in webpack.config.dev.js
  
+
+
+ *Stateful and  Stateless components
+ -function based components are stateless, mostly used for writing logic, make use of it often
+ - Class based components are stateful  (use as less as possible), Containers(in our example , App.js is an container)
+
+
+Components Lifecycle 
