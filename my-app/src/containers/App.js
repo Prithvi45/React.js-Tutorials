@@ -5,7 +5,11 @@ import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 
 class App extends Component {
-  state = {
+
+  constructor(props) {
+    super(props)
+
+    this.state = {
     persons: [
       { id: 'asfa1', name: 'Max', age: 28 },
       { id: 'vasdf1', name: 'Manu', age: 29 },
@@ -14,6 +18,33 @@ class App extends Component {
     otherState: 'some other value',
     showPersons: false
   }
+    console.log("[App.js] Inside constructor", props)
+  } 
+
+
+  componentWillMount() {
+    console.log("[App.js] ComponentWillMount")
+  }
+
+  componentDidMount (){
+    console.log("[App.js] componentDidMount")
+  }
+
+  shouldComponentUpdate (nextProps) {
+    console.log("[UPDATED App.js] Inside shouldComponentUpdate",nextProps)
+    return true;
+    // false : component will not get updated
+  }
+
+  componentWillUpdate(nextProps, nextstate) {
+    console.log("[UPDATED App.js] Inside componentWillUpdate",nextstate ,nextProps)
+  }
+
+  componentDidUpdate (){
+    console.log("[UPDATED App.js] Inside componentDidUpdate")
+  }
+
+ 
 
   nameChangedHandler = ( event, id ) => {
     const personIndex = this.state.persons.findIndex( p => {
@@ -47,6 +78,7 @@ class App extends Component {
   }
 
   render () {
+    console.log("[App.js] Inside render()")
     let persons = null;
 
     if ( this.state.showPersons ) {

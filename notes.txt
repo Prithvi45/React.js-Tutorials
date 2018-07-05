@@ -30,3 +30,7 @@ we will make changes into configuration file , so use eject method. After ejecti
 
 
 Components Lifecycle 
+
+
+
+* PureComponent comes with built in ShouldComponentUpdate() 
