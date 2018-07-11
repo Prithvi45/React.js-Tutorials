@@ -1,0 +1,15 @@
+1. create-react-app app_name
+2. npm run eject
+3. unlock css module
+4. remove default content of App
+
+
+Create two folders in "src"
+components(stateless) and containers (stateful)
+
+- Create a Layout
+
+
+
+
+npm install --save prop-types

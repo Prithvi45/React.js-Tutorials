@@ -36,13 +36,13 @@ Components Lifecycle
 
 * During rendering JSX , we wrap our compenents into a <div> </div>, instead use Higher order components to do same
 
-* npm install --save prop-types  : for validating props, e.g if i pass a string ("10") as props argu iinstead of inteher (10), to catch this type of mistakes 
+* npm install --save prop-types  : for validating props, e.g if i pass a string ("10") as props argu instead of integer (10), to catch this type of mistakes 
 
 
 
 ## Planning a React App
 1. Component Tree / Structure : prepare an high level structue
-2. Application Data : define and identify states
+2. Application Data : define and identify states, dynamic data
 3. Components vs containers (stateful and stateless)
 
 
