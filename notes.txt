@@ -29,6 +29,7 @@ we will make changes into configuration file , so use eject method. After ejecti
  - Class based components are stateful  (use as less as possible), Containers(in our example , App.js is an container)
 
 
+
 Components Lifecycle 
 
 
@@ -51,3 +52,9 @@ Component Tree
    |
  Layout
    
+
+
+
+Post App:
+Public API: http://jsonplaceholder.typicode.com/
+Javscript Packages: Axios (https://github.com/Prithvi45/axios)
